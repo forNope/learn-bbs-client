@@ -1,0 +1,7 @@
+.DS_Store
+.idea
+.cache-loader
+yarn-error.log
+node_modules
+dist
+server/mock/data/db.json

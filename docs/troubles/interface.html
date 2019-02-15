@@ -1,0 +1,47 @@
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>接口改进</title>
+</head>
+
+<body>
+  <div id="content"></div>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/showdown/1.8.6/showdown.min.js"></script>
+  <script>
+    var converter = new showdown.Converter(),
+      text = `
+## 接口改进列表
+
+#### 如果接口可以不加/Complex等namespace是最好
+#### 接口返回的status, success, msg这些统统不要
+
+<br>
+<br>
+
+- url: PUT http://112.74.40.124/api/v1/Complex/{posts || comments || replies}/{id}/{agreement || disagreement}
+- 问题: 没有登录时返回204并且操作无效，应返回401
+
+<br>
+<br>
+
+- url: POST http://112.74.40.124/api/v1/Knowledge/posts/2/comments
+- 问题1: 只给content返回了如下信息
+{
+    "data": "java.lang.NullPointerException",
+    "msg": "接口异常",
+    "status": 1
+}
+- 问题2: 给了content和anonymous时返回了403
+ 
+<br>
+<br>
+`
+    html = converter.makeHtml(text)
+    document.getElementById('content').innerHTML = html
+  </script>
+</body>
+
+</html>

@@ -1,0 +1,9 @@
+{
+  "extends": [
+    "./eslint.default.json"
+  ],
+  "rules": {
+    "no-unused-vars": 0,
+    "vue/no-unused-var": 0
+  }
+}

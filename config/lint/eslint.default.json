@@ -1,0 +1,69 @@
+{
+  "extends": [
+    "standard",
+    "plugin:vue/recommended"
+  ],
+  "globals": {
+    "Vue": true,
+    "axios": true,
+    "wx": true
+  },
+  "parser": "vue-eslint-parser",
+  "parserOptions": {
+    "parser": "babel-eslint"
+  },
+  "rules": {
+    "indent": 0,
+    "no-tabs": 0,
+    "no-trailing-spaces": 0,
+    "no-new": 0,
+    "vue/prop-name-casing": [
+      "error",
+      "kebab-case"
+    ],
+    "vue/name-property-casing": [
+      "error",
+      "kebab-case"
+    ],
+    "vue/max-attributes-per-line": [
+      3,
+      {
+        "singleline": 1,
+        "multiline": {
+          "max": 1,
+          "allowFirstLine": false
+        }
+      }
+    ],
+    "vue/script-indent": [
+      "error",
+      2,
+      {
+        "baseIndent": 1
+      }
+    ],
+    "vue/html-closing-bracket-newline": [
+      "error",
+      {
+        "singleline": "never",
+        "multiline": "always"
+      }
+    ],
+    "vue/html-indent": [
+      "error",
+      2
+    ],
+    "vue/html-closing-bracket-spacing": [
+      "error",
+      {
+        "startTag": "never",
+        "endTag": "never",
+        "selfClosingTag": "always"
+      }
+    ],
+    "vue/attribute-hyphenation": [
+      2,
+      "never"
+    ]
+  }
+}

@@ -1,0 +1,106 @@
+@import "../../base/fn";
+
+.weui-media-box {
+  position: relative;
+  padding: 15px;
+
+  &::before {
+    .setTopLine(@weuiLineColorLight);
+
+    left: 15px;
+  }
+
+  &:first-child {
+
+    &::before {
+      display: none
+    }
+  }
+
+  a&{
+    color:#000;
+    .setTapColor();
+
+    &:active{
+      background-color:#ececec;
+    }
+  }
+}
+
+.weui-media-box__title {
+  font-size: 17px;
+  font-weight: 400;
+  word-wrap: break-word;
+  word-break: break-all;
+  .ellipsis();
+}
+
+.weui-media-box__desc {
+  font-size: 13px;
+  line-height: 1.2;
+  color: @weuiTextColorGray;
+  .ellipsisLn(2);
+}
+
+.weui-media-box__info {
+  overflow: hidden;
+  margin-top: 15px;
+  padding-bottom: 5px;
+  list-style: none;
+  font-size: 13px;
+  line-height: 1em;
+  color: #cecece;
+}
+
+.weui-media-box__info__meta {
+  float: left;
+  padding-right: 1em;
+}
+
+.weui-media-box__info__meta_extra {
+  padding-left: 1em;
+  border-left: 1px solid #cecece;
+}
+
+.weui-media-box_text {
+
+  .weui-media-box__title {
+    margin-bottom: 8px;
+  }
+}
+
+.weui-media-box_appmsg {
+  display: flex;
+  align-items: center;
+
+  .weui-media-box__hd {
+    width: 60px;
+    height: 60px;
+    margin-right: 0.8em;
+    line-height: 60px;
+    text-align: center;
+  }
+
+  .weui-media-box__thumb {
+    width: 100%;
+    max-height: 100%;
+    vertical-align: top;
+  }
+
+  .weui-media-box__bd {
+    flex: 1;
+    min-width: 0;
+  }
+}
+
+.weui-media-box_small-appmsg {
+  padding: 0;
+
+  .weui-cells {
+    margin-top: 0;
+
+    &::before {
+      display: none;
+    }
+  }
+}

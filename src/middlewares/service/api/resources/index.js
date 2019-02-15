@@ -1,0 +1,6 @@
+export { getPost, getComment, getReply, getTeasing, getReport } from './getSingle'
+export { getPosts, getComments, getReplies, getTeasings, getReports } from './getList'
+export { releasePost, releaseComment, releaseReply, releaseTeasing } from './releaseResource'
+export { reportPost, reportComment, reportReply, reportTeasing } from './reportResource'
+export { default as evaluateResource } from './evaluateResource'
+export { deletePost, deleteComment, deleteReply, deleteTeasing } from './deleteResrouce'

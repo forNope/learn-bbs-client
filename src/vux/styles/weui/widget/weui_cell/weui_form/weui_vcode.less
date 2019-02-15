@@ -1,0 +1,37 @@
+@import "../../../base/fn";
+
+.weui-cell_vcode {
+  padding-top: 0;
+  padding-right: 0;
+  padding-bottom: 0;
+}
+
+.weui-vcode-img{
+  height: @weuiCellHeight;
+  margin-left: 5px;
+  vertical-align: middle;
+}
+
+.weui-vcode-btn {
+  display: inline-block;
+  height: @weuiCellHeight;
+  margin-left: 5px;
+  padding: 0 0.6em 0 0.7em;
+  border-left: 1px solid @weuiLineColorLight;
+  font-size: @weuiCellFontSize;
+  line-height: @weuiCellHeight;
+  vertical-align: middle;
+  color: @weuiDialogLinkColor;
+
+  button&{
+    border-top: 0;
+    border-right: 0;
+    border-bottom: 0;
+    outline: 0;
+    background-color: transparent;
+  }
+
+  &:active {
+    color: desaturate(@weuiDialogLinkColor, 30%);
+  }
+}

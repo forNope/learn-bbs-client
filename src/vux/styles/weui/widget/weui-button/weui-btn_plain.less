@@ -1,0 +1,59 @@
+@import "../../base/fn";
+
+.weui-btn_plain-primary {
+  border: 1px solid @weuiBtnPlainPrimaryBorderColor;
+  color: @weuiBtnPlainPrimaryColor;
+
+  &:not(.weui-btn_plain-disabled):active {
+    border-color: @weuiBtnPlainPrimaryActiveBorderColor;
+    color:@weuiBtnPlainPrimaryActiveColor;
+    background-color: transparent;
+  }
+
+  &::after {
+    border-width: 0;
+  }
+}
+
+.weui-btn_plain-default {
+  border: 1px solid @weuiBtnPlainDefaultBorderColor;
+  color: @weuiBtnPlainDefaultColor;
+
+  &:not(.weui-btn_plain-disabled):active {
+    border-color: @weuiBtnPlainDefaultActiveBorderColor;
+    color:@weuiBtnPlainDefaultActiveColor;
+  }
+
+  &::after {
+    border-width: 0;
+  }
+}
+
+/*
+* added by VUX
+*/
+
+button.weui-btn.weui-btn_plain-warn, input.weui-btn.weui-btn_plain-warn {
+  border-width: 1px;
+  background-color: transparent;
+}
+
+.weui-btn_plain-warn {
+  border: 1px solid @weuiBtnPlainWarnBorderColor;
+  color: @weuiBtnPlainWarnColor;
+  background: transparent;
+
+  &:not(.weui-btn_plain-disabled):active {
+    border-color: @weuiBtnPlainWarnActiveBorderColor;
+    color:@weuiBtnPlainWarnActiveColor;
+  }
+
+  &::after {
+    border-width: 0;
+  }
+}
+
+.weui-btn_plain-disabled{
+  border-color:rgba(0,0,0,0.2);
+  color:rgba(0,0,0,0.2);
+}

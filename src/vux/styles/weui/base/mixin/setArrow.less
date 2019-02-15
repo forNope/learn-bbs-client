@@ -1,0 +1,38 @@
+._setArrow(@arrowsize, @borderColor, @borderWidth){
+  display: inline-block;
+  width: @arrowsize;
+  height: @arrowsize;
+  border-width: @borderWidth @borderWidth 0 0;
+  border-style: solid;
+  border-color: @borderColor;
+}
+
+.setArrow(@direction, @arrowsize, @borderColor, @borderWidth) when (@direction = top) {
+  ._setArrow(@arrowsize, @borderColor, @borderWidth);
+
+  transform: matrix(0.71,-0.71,0.71,0.71,0,0); // rotate(-45deg)
+}
+
+.setArrow(@direction, @arrowsize, @borderColor,@borderWidth) when (@direction = right) {
+  ._setArrow(@arrowsize, @borderColor, @borderWidth);
+
+  position: relative;
+  transform: matrix(0.71,0.71,-0.71,0.71,0,0); // rotate(45deg);
+  top: -2px;
+}
+
+.setArrow(@direction, @arrowsize, @borderColor,@borderWidth) when (@direction = down) {
+  ._setArrow(@arrowsize, @borderColor, @borderWidth);
+
+  position: relative;
+  transform: matrix(-0.71,0.71,-0.71,-0.71,0,0); // rotate(135deg);
+  top: -3px;
+}
+
+.setArrow(@direction, @arrowsize, @borderColor,@borderWidth) when (@direction = left) {
+  ._setArrow(@arrowsize, @borderColor, @borderWidth);
+
+  position: relative;
+  transform: matrix(-0.71,-0.71,0.71,-0.71,0,0); // rotate(-135deg);
+  top: -2px;
+}

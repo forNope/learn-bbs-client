@@ -1,0 +1,38 @@
+@import "../../../base/fn";
+
+.weui-cells_checkbox {
+
+  .weui-cell__hd {
+    padding-right: @weuiCellInnerGapH;
+  }
+
+  .weui-icon-checked {
+
+    &::before {
+      display: block;
+      font-size: 23px;
+      color: #c9c9c9;
+      content: '\EA01';
+    }
+  }
+}
+
+// method2 accessbility
+
+.weui-check {
+  // checkbox
+
+  .weui-cells_checkbox & {
+
+    &:checked {
+
+      & + .weui-icon-checked {
+
+        &::before {
+          color: #09bb07;
+          content: '\EA06';
+        }
+      }
+    }
+  }
+}

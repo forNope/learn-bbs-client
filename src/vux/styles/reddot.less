@@ -1,0 +1,37 @@
+.vux-reddot,.vux-reddot-border,.vux-reddot-s {
+  position: relative;
+}
+
+.vux-reddot::after,.vux-reddot-border::after,.vux-reddot-s::after {
+  display: block;
+  position: absolute;
+  top: -3px;
+  right: -3px;
+  width: 8px;
+  height: 8px;
+  background-color: #f74c31;
+  content: '';
+  border-radius: 5px;
+  background-clip: padding-box;
+}
+
+.vux-reddot-border::before {
+  display: block;
+  position: absolute;
+  top: -4px;
+  right: -4px;
+  width: 8px;
+  height: 8px;
+  padding: 1px;
+  background-color: #fff;
+  content: '';
+  border-radius: 5px;
+  background-clip: padding-box;
+}
+
+.vux-reddot-s::after {
+  top: -5px;
+  right: -5px;
+  width: 6px;
+  height: 6px;
+}
